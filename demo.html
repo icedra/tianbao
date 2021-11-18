@@ -1,0 +1,66 @@
+<!-- 选项卡:选择一个按钮改变div的背景颜色
+1. 获取三个button按钮和一个div
+2. 最先给div设置基本背景颜色
+3. 3个button设置onclick事件
+4. 点击按钮之后,div.style.cssText={background-color:选定颜色}-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var otoRed = document.getElementById("toRed");
+            var otoGreen = document.getElementById("toGreen");
+            var otoYellow = document.getElementById("toYellow");
+            var ocolorBox = document.getElementById("colorBox");
+
+            otoRed.onclick = function () {
+                changeColor("red");
+                changeWidth("300px");
+            }
+
+            otoGreen.onclick = function () {
+                changeColor("green");
+                changeWidth("500px");
+            }
+
+            otoYellow.onclick = function () {
+                changeColor("yellow");
+                changeWidth("600px");
+            }
+
+            function changeColor(color) {
+                ocolorBox.style.cssText = "background-color:" + color;
+            }
+
+            function changeWidth(toWidth){
+            	//ocolorBox.style.width = toWidth;
+            	//方框中必须写入字符串
+                ocolorBox.style['width'] = toWidth;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="toRed">变红</button>
+    <button id="toGreen">变蓝</button>
+    <button id="toYellow">变黄</button>
+    <div id="colorBox"></div>
+</body>
+
+</html>
+————————————————
+版权声明：本文为CSDN博主「pinkowonote」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/pinkowonote/article/details/107682427

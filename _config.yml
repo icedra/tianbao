@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Beautiful Jekyll!
 # This config file is meant for settings that affect your entire website. When you first
 # set up your website you should go through all these settings and edit them, but after
@@ -254,3 +255,6 @@ plugins:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
+=======
+theme: jekyll-theme-cayman
+>>>>>>> a1361a197acc4d1c1a7d8be8556a2ba0fcae0eff
